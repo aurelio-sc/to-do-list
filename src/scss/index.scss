@@ -1,0 +1,27 @@
+@import 'variables';
+
+.login-form {
+    padding-top: 30px;
+    @media screen and (min-width: $tablet) {
+        padding-top: 60px;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: fit-content;
+        max-width: 360px;
+        border-radius: $border-radius;
+        overflow: hidden;
+        background-color: $blue-extra-light;
+        text-align: left;
+        padding: 20px;
+        margin: 0 auto;
+        .accounts-counter{
+            color: $text-color;
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+}
