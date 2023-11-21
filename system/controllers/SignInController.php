@@ -16,4 +16,8 @@ class SignInController {
             }
         }
     }
+
+    public function index() {
+        include path('views') . '/signin.php';
+    }
 }

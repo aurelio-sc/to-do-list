@@ -1,4 +1,5 @@
 <?php
+//Connection
 $host = '127.0.0.1';
 $user = 'root';
 $password = '';
@@ -10,4 +11,11 @@ if ($error = $mysqli->connect_errno) {
     die('Error code: ' . $error);
 }
 
-?>
+function path($alias) {
+    $paths = [
+        'views' => __DIR__ . '/system/views',
+        'controllers' => __DIR__ . '/system/controllers',
+        'models' => __DIR__ . '/system/models'
+    ];
+    return $paths[$alias];
+}
