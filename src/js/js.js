@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (result.status === 'success') {
                     alert(result.message);                    
                 } else {
-                    alert('Erro no login: ' + result.message);
+                    alert('Sign in failed: ' + result.message);
                 }
             } else {
                 //alert('Erro na solicitação AJAX.');
