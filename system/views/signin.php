@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/classes.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/signin.css">
     <script src="assets/js/js.js"></script> 
     <title>To Do List</title>
 </head>
@@ -27,8 +27,9 @@
                         <label class="form-label" for="password">Password</label> 
                         <input class="form-input" type="password" name="password" id="password">                                       
                     </div>
-                    <div class="form-row">
+                    <div class="form-row submit-row">
                         <button type="submit" class="form-submit">Log In</button>
+                        <a class="create-account" href="user/signup">Create account</a>
                     </div>
                 </form class="std-form">
                 <p class="accounts-counter"><span>999</span> people are using To Do List!</p>

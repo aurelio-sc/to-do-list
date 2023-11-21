@@ -17,11 +17,25 @@
         text-align: left;
         padding: 20px;
         margin: 0 auto;
+        .sign-in-form{
+            .submit-row{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .create-account{
+                    transition: all 0.3s;
+                    color: $blue-dark;
+                    &:hover,&:focus,&:active{
+                        color: $blue-medium;
+                    }                   
+                }
+            }
+        }
         .accounts-counter{
             color: $text-color;
             span{
                 font-weight: 600;
             }
-        }
+        }        
     }
 }

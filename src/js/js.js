@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     alert('Sign in failed: ' + result.message);
                 }
             } else {
-                //alert('Erro na solicitação AJAX.');
+                //alert('AJAX error.');
             }
         };        
         xhr.onerror = function() {
-            //alert('Erro na solicitação AJAX.');
+            //alert('AJAX error.');
         };        
         xhr.send(formData);
     });
