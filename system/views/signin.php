@@ -16,7 +16,7 @@
             <div class="wrapper">
                 <div class="text">
                     <h2 class="content-title">To Do List</h2>
-                    <p class="content-description">Streamlined productivity, one task at a time.<br/>Log in to manage your workflow.</p>
+                    <p class="content-description">Streamlined productivity, one task at a time.<br/>Sign in to manage your workflow.</p>
                 </div>
                 <form class="std-form sign-in-form" action="user/signin" method="POST">
                     <div class="form-row">
