@@ -1,25 +1,34 @@
 <?php
 //Controllers
 include ('controllers/SignInController.php');
+include ('controllers/SignUpController.php');
 
 function route($url) {
     switch ($url) {
-        case '/user/signin':
-            $loginController = new SignInController();
-            $loginController->processSignIn();
-            echo 'foi';
-            break;
         case '/':
-            $loginController = new SignInController();
-            $loginController->index();
+            $signInController = new SignInController();
+            $signInController->index();
             break;
+        case '/user/signin':
+            $signInController = new SignInController();
+            $signInController->processSignIn();
+            break;
+        case '/user/signup':            
+            $signUpController = new SignUpController();
+            $signUpController->index();                     
+            break;
+        case '/user/signup/process':            
+            $signUpController = new SignUpController();
+            $signUpController->processSignUp();                     
+            break; 
         default:
-        echo 'foi-se';
+        echo 'erro 404';
         break;
     }
 }
 
-$url_base = '/to-do-list';
 $url = parse_url($_SERVER['REQUEST_URI'])['path'];
-$url = str_replace($url_base,'',$url);
+$url = str_replace(URL_BASE,'',$url);
 route($url);
+
+//$_SERVER['REQUEST_METHOD']

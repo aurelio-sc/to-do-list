@@ -19,3 +19,5 @@ function path($alias) {
     ];
     return $paths[$alias];
 }
+
+const URL_BASE = '/to-do-list';

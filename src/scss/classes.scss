@@ -6,13 +6,52 @@
 }
 
 //Forms:
-.std-form{
-    width: 100%;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.login-form {
+    padding-top: 30px;
+    @media screen and (min-width: $tablet) {
+        padding-top: 60px;
+    }
+    .std-form-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: fit-content;
+        max-width: 360px;
+        border-radius: $border-radius;
+        overflow: hidden;
+        background-color: $blue-extra-light;
+        text-align: left;
+        padding: 15px;
+        margin: 0 auto;              
+        .std-form{
+            width: 100%;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .submit-row{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .create-account{
+                    transition: all 0.3s;
+                    color: $blue-dark;
+                    &:hover,&:focus,&:active{
+                        color: $blue-medium;
+                    }                   
+                }
+            }
+        }
+    }
 }
+
+.accounts-counter{
+    color: $text-color;
+    span{
+        font-weight: 600;
+    }
+}  
+
 .form-row {
     position: relative;
     .form-label{

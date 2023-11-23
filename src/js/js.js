@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     //Sign In Form:
-    var form = document.querySelector('.sign-in-form');
+    var form = document.querySelector('.sign-in-form');    
     form.addEventListener('submit', function(event) {        
         event.preventDefault();        
         var formData = new FormData(form);
         var xhr = new XMLHttpRequest();        
-        xhr.open('POST', 'user/signin', true);        
+        xhr.open('POST', form.getAttribute('action'), true);        
         xhr.onload = function() {
             if (xhr.status >= 200 && xhr.status < 400) {                
                 var result = JSON.parse(xhr.responseText);
