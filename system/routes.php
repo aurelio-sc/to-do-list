@@ -1,7 +1,7 @@
 <?php
 //Controllers
-include ('controllers/SignInController.php');
-include ('controllers/SignUpController.php');
+include (path('controllers') . 'SignInController.php');
+include (path('controllers') . 'SignUpController.php');
 
 function route($url) {
     switch ($url) {

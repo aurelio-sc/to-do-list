@@ -1,4 +1,6 @@
 <?php
+include (path('models') . 'UserModel.php');
+
 class SignUpController {
     public function processSignUp() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {            
@@ -6,6 +8,7 @@ class SignUpController {
             $email = $_POST['email'];
             $password = $_POST['password'];
             $confirm_password = $_POST['confirm-password'];
+
             if (isset($username) || isset($password) || isset($email) || isset($confirm_password)) {
                 if (strlen($username) == 0) {
                     $response = ['status' => 'failure', 'message' => '"Username" cannot be empty.'];
@@ -18,7 +21,8 @@ class SignUpController {
                 } else if ($confirm_password != $password) {
                     $response = ['status' => 'failure', 'message' => 'The passwords do not match.'];
                 } else {
-                    $response = ['status' => 'success', 'message' => 'Successfully logged in!'];
+                    //$response = ['status' => 'success', 'message' => 'Successfully logged in!'];
+                    $user = new User($username,$email,$password);
                 }
                 echo json_encode($response);
                 exit();

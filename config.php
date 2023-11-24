@@ -13,9 +13,9 @@ if ($error = $mysqli->connect_errno) {
 
 function path($alias) {
     $paths = [
-        'views' => __DIR__ . '/system/views',
-        'controllers' => __DIR__ . '/system/controllers',
-        'models' => __DIR__ . '/system/models'
+        'views' => __DIR__ . '\system\views\\',
+        'controllers' => __DIR__ . '\system\controllers\\',
+        'models' => __DIR__ . '\system\models\\'
     ];
     return $paths[$alias];
 }
