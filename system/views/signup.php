@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo URL_BASE ?>/assets/css/reset.css">
-    <link rel="stylesheet" href="<?php echo URL_BASE ?>/assets/css/classes.css">
-    <link rel="stylesheet" href="<?php echo URL_BASE ?>/assets/css/signup.css">
-    <script src="<?php echo URL_BASE ?>/assets/js/js.js"></script> 
+    <link rel="stylesheet" href="<?php echo url('/assets/css/reset.css')?>">
+    <link rel="stylesheet" href="<?php echo url('/assets/css/classes.css')?>">
+    <link rel="stylesheet" href="<?php echo url('/assets/css/signup.css')?>">
+    <script src="<?php echo url('/assets/js/js.js')?>"></script> 
     <title>To Do List</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
                     <h2 class="content-title">To Do List</h2>
                     <p class="content-description">Streamlined productivity, one task at a time.<br/>Sign in to manage your workflow.</p>
                 </div>
-                <form class="std-form sign-in-form" action="<?php echo URL_BASE ?>/user/signup/process" method="POST">
+                <form class="std-form sign-in-form" action="<?php echo url('/user/signup/process')?>" method="POST">
                     <div class="form-row">
                         <label class="form-label" for="username">Username</label>     
                         <input class="form-input" type="text" name="username" id="username">                                   
@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-row submit-row">
                         <button type="submit" class="form-submit">Sign Up</button>
-                        <a class="create-account" href="<?php echo URL_BASE ?>">Sign In</a>
+                        <a class="create-account" href="<?php echo url()?>">Sign In</a>
                     </div>
                 </form class="std-form">
                 <p class="accounts-counter"><span>999</span> people are using To Do List!</p>

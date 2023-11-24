@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'ToDoList\\System\\' => array($baseDir . '/system'),
     'ToDoList\\Source\\' => array($baseDir . '/src'),
+    'CoffeeCode\\Router\\' => array($vendorDir . '/coffeecode/router/src'),
 );

@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'c52d1999593b4e86e35397cfc651c4d4' => $baseDir . '/config.php',
+    '91cd0418313d9d81450cf91da18ff0a0' => $baseDir . '/system/config.php',
+    'e19e5a58e8f31fde4a527a9773c1480e' => $baseDir . '/system/helpers.php',
 );

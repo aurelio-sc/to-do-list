@@ -1,7 +1,10 @@
 <?php
 
-const URL_BASE = '/to-do-list';
-const DEBUG = true;
+const SITE = [
+    'domain' => 'localhost',
+    'protocol' => 'http',
+    'base_url' => '/to-do-list'
+];
 
 const DATA_BASE_CONFIG = [
     'driver' => 'mysql',
@@ -17,13 +20,11 @@ const DATA_BASE_CONFIG = [
     ]
 ];
 
-function path($alias) {
-    $paths = [
-        'system' => __DIR__ . '/system',
-        'views' => __DIR__ . '/system/views',
-        'controllers' => __DIR__ . '/system/controllers',
-        'models' => __DIR__ . '/system/models'
-    ];
-    return $paths[$alias];
-}
+const DEBUG = true;
 
+const PATHS = [
+    'system' => __DIR__,
+    'views' => __DIR__ . '/views',
+    'controllers' => __DIR__ . '/controllers',
+    'models' => __DIR__ . '/models'
+];

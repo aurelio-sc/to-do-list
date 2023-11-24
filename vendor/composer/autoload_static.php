@@ -4,10 +4,11 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitcaf82020af328118f66ecc77857a19c8
+class ComposerStaticInitcf470436bec15e87a3253055dc560d40
 {
     public static $files = array (
-        'c52d1999593b4e86e35397cfc651c4d4' => __DIR__ . '/../..' . '/config.php',
+        '91cd0418313d9d81450cf91da18ff0a0' => __DIR__ . '/../..' . '/system/config.php',
+        'e19e5a58e8f31fde4a527a9773c1480e' => __DIR__ . '/../..' . '/system/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -15,6 +16,10 @@ class ComposerStaticInitcaf82020af328118f66ecc77857a19c8
         array (
             'ToDoList\\System\\' => 16,
             'ToDoList\\Source\\' => 16,
+        ),
+        'C' => 
+        array (
+            'CoffeeCode\\Router\\' => 18,
         ),
     );
 
@@ -27,6 +32,10 @@ class ComposerStaticInitcaf82020af328118f66ecc77857a19c8
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'CoffeeCode\\Router\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/coffeecode/router/src',
+        ),
     );
 
     public static $classMap = array (
@@ -36,9 +45,9 @@ class ComposerStaticInitcaf82020af328118f66ecc77857a19c8
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitcaf82020af328118f66ecc77857a19c8::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitcaf82020af328118f66ecc77857a19c8::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitcaf82020af328118f66ecc77857a19c8::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcf470436bec15e87a3253055dc560d40::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcf470436bec15e87a3253055dc560d40::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitcf470436bec15e87a3253055dc560d40::$classMap;
 
         }, null, ClassLoader::class);
     }

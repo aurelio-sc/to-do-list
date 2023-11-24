@@ -6,7 +6,8 @@
             "ToDoList\\System\\": "system/"
         },
         "files": [
-            "config.php"            
+            "system/config.php",
+            "system/helpers.php"
         ]
     },
     "authors": [
@@ -15,5 +16,7 @@
             "email": "asc.mat@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "coffeecode/router": "^2.0"
+    }
 }
