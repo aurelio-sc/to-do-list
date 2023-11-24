@@ -1,5 +1,8 @@
 <?php
-include (path('models') . 'UserModel.php');
+
+namespace ToDoList\System\Controllers;
+
+use ToDoList\System\Models\User;
 
 class SignUpController {
     public function processSignUp() {

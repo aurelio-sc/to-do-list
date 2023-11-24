@@ -1,0 +1,19 @@
+{
+    "name": "aurelio-soares/to-do-list",
+    "autoload": {
+        "psr-4": {
+            "ToDoList\\Source\\": "src/",
+            "ToDoList\\System\\": "system/"
+        },
+        "files": [
+            "config.php"            
+        ]
+    },
+    "authors": [
+        {
+            "name": "Aurélio Soares",
+            "email": "asc.mat@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,7 +1,7 @@
 <?php
-//Controllers
-include (path('controllers') . 'SignInController.php');
-include (path('controllers') . 'SignUpController.php');
+
+use ToDoList\System\Controllers\SignInController;
+use ToDoList\System\Controllers\SignUpController;
 
 function route($url) {
     switch ($url) {

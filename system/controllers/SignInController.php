@@ -1,4 +1,9 @@
 <?php
+
+namespace ToDoList\System\Controllers;
+
+use ToDoList\System\Models\User;
+
 class SignInController {
     public function processSignIn() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {            
