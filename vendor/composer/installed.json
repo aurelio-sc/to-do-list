@@ -51,6 +51,50 @@
                 "source": "https://github.com/robsonvleite/router/tree/2.0.2"
             },
             "install-path": "../coffeecode/router"
+        },
+        {
+            "name": "yuri-oliveira/validate",
+            "version": "v1.0.8",
+            "version_normalized": "1.0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/YuriSalesdeOliveira/yuri-oliveira-validate.git",
+                "reference": "0ae184dc2952338dbc4d847c79520505079dede2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/YuriSalesdeOliveira/yuri-oliveira-validate/zipball/0ae184dc2952338dbc4d847c79520505079dede2",
+                "reference": "0ae184dc2952338dbc4d847c79520505079dede2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "time": "2023-04-13T00:47:09+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "YuriOliveira\\Validate\\": "source"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yuri Sales de Oliveira",
+                    "email": "yuri_oli@hotmail.com",
+                    "homepage": "https://www.facebook.com/profile.php?id=100052262689312"
+                }
+            ],
+            "description": "Pacote para fazer validação",
+            "support": {
+                "issues": "https://github.com/YuriSalesdeOliveira/yuri-oliveira-validate/issues",
+                "source": "https://github.com/YuriSalesdeOliveira/yuri-oliveira-validate/tree/v1.0.8"
+            },
+            "install-path": "../yuri-oliveira/validate"
         }
     ],
     "dev": true,

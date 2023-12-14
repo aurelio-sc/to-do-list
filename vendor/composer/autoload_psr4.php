@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'YuriOliveira\\Validate\\' => array($vendorDir . '/yuri-oliveira/validate/source'),
     'ToDoList\\System\\' => array($baseDir . '/system'),
     'ToDoList\\Source\\' => array($baseDir . '/src'),
     'CoffeeCode\\Router\\' => array($vendorDir . '/coffeecode/router/src'),

@@ -12,6 +12,10 @@ class ComposerStaticInitcf470436bec15e87a3253055dc560d40
     );
 
     public static $prefixLengthsPsr4 = array (
+        'Y' => 
+        array (
+            'YuriOliveira\\Validate\\' => 22,
+        ),
         'T' => 
         array (
             'ToDoList\\System\\' => 16,
@@ -24,6 +28,10 @@ class ComposerStaticInitcf470436bec15e87a3253055dc560d40
     );
 
     public static $prefixDirsPsr4 = array (
+        'YuriOliveira\\Validate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yuri-oliveira/validate/source',
+        ),
         'ToDoList\\System\\' => 
         array (
             0 => __DIR__ . '/../..' . '/system',

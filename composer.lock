@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f65c57e2d23273d5afa5aa8c7aa54056",
+    "content-hash": "7092596b58dddaec6ed5ae8cd245be17",
     "packages": [
         {
             "name": "coffeecode/router",
@@ -54,6 +54,47 @@
                 "source": "https://github.com/robsonvleite/router/tree/2.0.2"
             },
             "time": "2022-04-23T16:01:23+00:00"
+        },
+        {
+            "name": "yuri-oliveira/validate",
+            "version": "v1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/YuriSalesdeOliveira/yuri-oliveira-validate.git",
+                "reference": "0ae184dc2952338dbc4d847c79520505079dede2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/YuriSalesdeOliveira/yuri-oliveira-validate/zipball/0ae184dc2952338dbc4d847c79520505079dede2",
+                "reference": "0ae184dc2952338dbc4d847c79520505079dede2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "YuriOliveira\\Validate\\": "source"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yuri Sales de Oliveira",
+                    "email": "yuri_oli@hotmail.com",
+                    "homepage": "https://www.facebook.com/profile.php?id=100052262689312"
+                }
+            ],
+            "description": "Pacote para fazer validação",
+            "support": {
+                "issues": "https://github.com/YuriSalesdeOliveira/yuri-oliveira-validate/issues",
+                "source": "https://github.com/YuriSalesdeOliveira/yuri-oliveira-validate/tree/v1.0.8"
+            },
+            "time": "2023-04-13T00:47:09+00:00"
         }
     ],
     "packages-dev": [],

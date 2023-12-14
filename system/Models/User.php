@@ -2,37 +2,64 @@
 
 namespace ToDoList\System\Models;
 
+use Exception;
+use ToDoList\System\Database\Connection;
+
 class User
 {
     private $id;
     private $username;
     private $email;  
     private $password;
-
-    //Construct:
-    public function __construct(string $username, string $email, string $password) {        
-        $this->username = $username;
-        $this->email = $email;
-        $this->setPassword($password);
+    
+    //Validatiors:
+    protected function isStringValid(string $string) : bool
+    {
+        if (!strlen($string) > 0) {
+            return false;
+        }
+        return true;
     }
 
-    //Password hashing:
-    private function setPassword(string $password) : void {        
-        $this->password = password_hash($password,PASSWORD_DEFAULT);
-    }    
-
-    private function isEmailValid(string $email) : bool {
+    protected function isEmailValid(string $email) : bool 
+    {
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
 
-    private function addUser(int $id, string $username, string $email, string $password) {
-        global $mysqli;
-        $query = "INSERT INTO `user` (`id`, `username`, `email`, `password`) VALUES (?, ?, ?, ?, ?)";
-        $stmt = $mysqli->prepare($query);
-        if ($stmt) {
-            $stmt->bind_param('isss', $this->id, $this->username, $this->email, $this->password);
-            $stmt->execute();
-            $stmt->close();
+    //Setters:
+    public function setUsername(string $username) : void
+    {
+        if (!$this->isStringValid($username)) {
+            throw new Exception('Username cannot be empty.');
         }
+        $this->username = $username;
+    }
+    
+    public function setEmail(string $email) : void
+    {
+        if (!$this->isEmailValid($email)) {
+            throw new Exception('Invalid email.');
+        }
+        $this->email = $email;
+    }    
+
+    public function setPassword(string $password) : void 
+    {   
+        if (!$this->isStringValid($password)){
+            throw new Exception('Passowrd cannot be empty.');
+        }
+        $this->password = password_hash($password,PASSWORD_DEFAULT);
+    } 
+
+    public function addUser() : bool 
+    {
+        $conn = Connection::connection();
+        $query = "INSERT INTO user (username, email, password) VALUES (:username, :email, :password)";
+        $stmt = $conn->prepare($query);                
+        return $stmt->execute([
+            ':username' => $this->username,
+            ':email' => $this->email,
+            ':password' => $this->password
+        ]);
     }
 }

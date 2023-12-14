@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-row">
                         <label class="form-label" for="password">Confirm your password</label> 
-                        <input class="form-input" type="password" name="confirm-password" id="confirm-passowrd">                                       
+                        <input class="form-input" type="password" name="confirm_password" id="confirm-passowrd">                                       
                     </div>
                     <div class="form-row submit-row">
                         <button type="submit" class="form-submit">Sign Up</button>

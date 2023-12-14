@@ -17,6 +17,7 @@
         }
     ],
     "require": {
-        "coffeecode/router": "^2.0"
+        "coffeecode/router": "^2.0",
+        "yuri-oliveira/validate": "^1.0"
     }
 }

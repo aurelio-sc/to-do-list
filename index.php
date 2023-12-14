@@ -19,7 +19,7 @@ $router->namespace("ToDoList\System\Controllers");
 // $router->patch("/route/{id}/profile/{photo}", "Controller:method");
 // $router->delete("/route/{id}", "Controller:method");
 
-$router->get('/', 'SignInController:index');
+$router->get('/', 'SignInController:index', 'signin.index');
 $router->post('/user/signin', 'SignInController:processSignIn');
 $router->get('/user/signup', 'SignUpController:index');
 $router->post('/user/signup/process', 'SignUpController:processSignUp');

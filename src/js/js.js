@@ -40,9 +40,14 @@ document.addEventListener('DOMContentLoaded', function () {
             if (xhr.status >= 200 && xhr.status < 400) {                
                 var result = JSON.parse(xhr.responseText);
                 if (result.status === 'success') {
-                    alert(result.message);                    
+                    if(confirm(result.message)) {
+                        if (result.redirect) {
+                            window.location.href = result.redirect;
+                        }
+                    }
+
                 } else {
-                    alert('Sign in failed: ' + result.message);
+                    alert(result.message);
                 }
             } else {
                 //alert('AJAX error.');
